@@ -2,8 +2,6 @@ language: cpp
 os: osx
 
 before_install:
-    - brew update
-    - brew install pyenv
     - brew install igraph
     - pyenv install 2.7.10
     - pyenv install 3.5.0
@@ -11,7 +9,7 @@ before_install:
 
 script:
     - pyenv local 3.5.0
-    - pip install cmake
+    - pip install --user cmake
     - git clone https://github.com/Kuree/cgra_pnr
     - cd cgra_pnr && git submodule update --init --recursive
-    - cd cgra_pnr/thunder && python setup.py bdist_wheel
+    - cd thunder && python setup.py bdist_wheel
