@@ -12,4 +12,5 @@ script:
     - pip install --user cmake
     - git clone https://github.com/Kuree/cgra_pnr
     - cd cgra_pnr && git submodule update --init --recursive
+    - git checkout dev
     - cd thunder && python setup.py bdist_wheel
