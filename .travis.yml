@@ -3,6 +3,9 @@ os: osx
 
 before_install:
     - brew install igraph
+    - brew install gcc@7
+      # https://stackoverflow.com/q/49577343
+      # apple strikes again!
     - pyenv install 2.7.10
     - pyenv install 3.5.0
     - pyenv versions
