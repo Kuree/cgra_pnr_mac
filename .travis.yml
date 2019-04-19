@@ -3,7 +3,9 @@ os: osx
 
 before_install:
     - brew install igraph
+    - sudo softwareupdate -i "Command Line Tools (macOS High Sierra version 10.13) for Xcode-9.3";
     - brew install gcc@7
+    - rm -rf '/usr/local/include/c++';
       # https://stackoverflow.com/q/49577343
       # apple strikes again!
     - which g++-7
