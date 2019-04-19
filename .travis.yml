@@ -1,0 +1,9 @@
+language: python
+os: osx
+
+script:
+    - pip install cmake
+    - brew install igraph
+    - git clone https://github.com/Kuree/cgra_pnr
+    - cd cgra_pnr && git submodule update --init --recursive
+    - cd cgra_pnr/thunder && python setup.py bdist_wheel
