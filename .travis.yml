@@ -6,6 +6,9 @@ before_install:
     - brew install gcc@7
       # https://stackoverflow.com/q/49577343
       # apple strikes again!
+    - which g++-7
+    - export CXX=g++-7
+    - export CC=gcc-7
     - pyenv install 2.7.10
     - pyenv install 3.5.0
     - pyenv versions
