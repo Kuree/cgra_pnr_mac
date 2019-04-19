@@ -11,7 +11,5 @@ script:
     - pyenv local 3.5.0
     - pip install --user cmake
     - git clone https://github.com/Kuree/cgra_pnr
-    - export CXX=g++-7
-    - export CC=gcc-7
     - cd cgra_pnr && git submodule update --init --recursive
     - cd thunder && python setup.py bdist_wheel
