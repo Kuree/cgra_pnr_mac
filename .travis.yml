@@ -4,7 +4,7 @@ os: osx
 before_install:
     - brew install igraph
       # - pyenv install 2.7.10
-    - export PYTHON=3.5.0
+    - export PYTHON=3.6.0
     - brew install pyenv-virtualenv
     - pyenv install ${PYTHON}
     - export PYENV_VERSION=$PYTHON
@@ -14,7 +14,7 @@ before_install:
     - python --version
 
 script:
-    - python -m pip install cmake twine
+    - python -m pip install cmake twine wheel
     - git clone https://github.com/Kuree/cgra_pnr
     - cd cgra_pnr
     - git submodule update --init --recursive
