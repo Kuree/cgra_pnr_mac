@@ -3,7 +3,7 @@ os: osx
 
 before_install:
     - brew install igraph
-    - export PYTHON=3.6.0
+    - export PYTHON=3.7.0
     - brew install pyenv-virtualenv
     - pyenv install ${PYTHON}
     - export PYENV_VERSION=$PYTHON
