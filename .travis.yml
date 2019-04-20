@@ -11,9 +11,8 @@ before_install:
     - pyenv versions
 
 script:
-    - pyenv local 3.5.0
-    - pip install --user cmake
-    - export VERBOSE=1
+    - pyenv global 3.5.0
+    - python -m pip install cmake twine
     - git clone https://github.com/Kuree/cgra_pnr
     - cd cgra_pnr
     - git checkout dev
