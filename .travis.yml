@@ -2,8 +2,10 @@ language: cpp
 os: osx
 
 before_install:
+    - brew tap homebrew/science
+    - brew install gmp
     - brew install igraph
-    - brew link igraph
+    - brew link --overwrite igraph
       # - pyenv install 2.7.10
     - pyenv install 3.5.0
     - pyenv versions
