@@ -2,23 +2,23 @@ language: cpp
 os: osx
 
 before_install:
-    - brew install igraph
-      # - pyenv install 2.7.10
-    - export PYTHON=3.6.0
-    - brew install pyenv-virtualenv
-    - pyenv install ${PYTHON}
-    - export PYENV_VERSION=$PYTHON
-    - export PATH="/Users/travis/.pyenv/shims:${PATH}"
-    - pyenv virtualenv venv
-    - source /Users/travis/.pyenv/versions/${PYTHON}/envs/venv/bin/activate
+    - export VERBOSE=1
+      #- brew install igraph
+      #- export PYTHON=3.6.0
+      #- brew install pyenv-virtualenv
+      #- pyenv install ${PYTHON}
+      #- export PYENV_VERSION=$PYTHON
+      #- export PATH="/Users/travis/.pyenv/shims:${PATH}"
+      #- pyenv virtualenv venv
+      #- source /Users/travis/.pyenv/versions/${PYTHON}/envs/venv/bin/activate
     - python --version
 
 script:
-    - python -m pip install cmake twine wheel
+    #- python -m pip install cmake twine wheel
     - git clone https://github.com/Kuree/cgra_pnr
     - cd cgra_pnr
     - git submodule update --init --recursive
-    - cd thunder && python setup.py bdist_wheel && cd ..
+      #- cd thunder && python setup.py bdist_wheel && cd ..
     - cd cyclone && python setup.py bdist_wheel && cd ..
 
 after_success:
