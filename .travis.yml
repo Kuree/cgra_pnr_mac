@@ -3,6 +3,7 @@ os: osx
 
 before_install:
     - brew install igraph
+    - brew link igraph
       # - pyenv install 2.7.10
     - pyenv install 3.5.0
     - pyenv versions
