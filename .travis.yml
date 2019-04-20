@@ -10,6 +10,7 @@ before_install:
 script:
     - pyenv local 3.5.0
     - pip install --user cmake
+    - export VERBOSE=1
     - git clone https://github.com/Kuree/cgra_pnr
     - cd cgra_pnr && git submodule update --init --recursive
     - git checkout dev
