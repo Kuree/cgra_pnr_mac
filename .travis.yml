@@ -2,16 +2,19 @@ language: cpp
 os: osx
 
 before_install:
-    - brew install cairo
-    - brew install gmp
     - brew install igraph
-    - brew link --overwrite igraph
       # - pyenv install 2.7.10
-    - pyenv install 3.5.0
-    - pyenv versions
+    - export PYTHON=3.5.0
+    - brew outdated pyenv && brew upgrade pyenv
+    - brew install pyenv-virtualenv
+    - pyenv install ${PYTHON}
+    - export PYENV_VERSION=$PYTHON
+    - export PATH="/Users/travis/.pyenv/shims:${PATH}"
+    - pyenv-virtualenv venv
+    - source venv/bin/activate
+    - python --version
 
 script:
-    - pyenv global 3.5.0
     - python -m pip install cmake twine
     - git clone https://github.com/Kuree/cgra_pnr
     - cd cgra_pnr
