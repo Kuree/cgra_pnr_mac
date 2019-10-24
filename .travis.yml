@@ -4,7 +4,7 @@ os: osx
 before_install:
     # https://discourse.brew.sh/t/octave-require-relative-problem/6043/2
     - HOMEBREW_NO_AUTO_UPDATE=1 brew install igraph
-    - export PYTHON=3.7.0
+    - export PYTHON=3.7.0b3
     - HOMEBREW_NO_AUTO_UPDATE=1 brew install pyenv-virtualenv
     - pyenv install ${PYTHON}
     - export PYENV_VERSION=$PYTHON
