@@ -1,5 +1,6 @@
 language: cpp
 os: osx
+osx_image: xcode11.2
 
 before_install:
     - brew install igraph
