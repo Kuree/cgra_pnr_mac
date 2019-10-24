@@ -1,11 +1,11 @@
 language: cpp
 os: osx
-osx_image: xcode11.2
 
 before_install:
-    - brew install igraph
+    # https://discourse.brew.sh/t/octave-require-relative-problem/6043/2
+    - HOMEBREW_NO_AUTO_UPDATE=1 brew install igraph
     - export PYTHON=3.7.0
-    - brew install pyenv-virtualenv
+    - HOMEBREW_NO_AUTO_UPDATE=1 brew install pyenv-virtualenv
     - pyenv install ${PYTHON}
     - export PYENV_VERSION=$PYTHON
     - export PATH="/Users/travis/.pyenv/shims:${PATH}"
